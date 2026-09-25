@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Aira's Little Corner ♡</title>
+ <style>
+ * {
+ box-sizing: border-box;
+ scroll-behavior: smooth;
+ }
+ body {
+ margin: 0;
+ background: #faf5ef;
+ color: #332c2a;
+ font-family: Arial, sans-serif;
+ }
+ /* ================= HEADER ================= */
+ header {
+ height: 70px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 0 7%;
+ background: #f9eee8;
+ border-bottom: 1px solid #e2d5ce;
+ position: sticky;
+ top: 0;
+ z-index: 10;
+ }
+ .logo {
+ font-family: cursive;
+ font-size: 28px;
+ }
+ nav a {
+ text-decoration: none;
+ color: #332c2a;
+ margin-left: 25px;
+ font-size: 14px;
+ }
+ nav a:hover {
+ color: #c98f8f;
+ }
+ /* ================= GENERAL ================= */
+ section {
+ padding: 75px 8%;
+ }
+ /* ================= HOME ================= */
+ #home {
+ min-height: 650px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 55px;
+ background: #fcf8f4;
+ }
+ .home-text {
+ width: 55%;
+ }
+ .home-text h1 {
+ font-family: cursive;
+ font-weight: normal;
+ font-size: 62px;
+ line-height: 1.15;
+ margin: 0 0 22px;
+ }
+ .underline {
+ width: 430px;
+ height: 11px;
+ background: #efd0ca;
+ border-radius: 50%;
+ margin-bottom: 40px;
+ }
+ .home-text p {
+ font-size: 20px;
+ line-height: 1.8;
+ max-width: 780px;
+ }
+ .quote {
+ margin-top: 28px;
+ font-size: 18px;
+ }
+ /* HOME PHOTO
+ ONLY BOOK + COFFEE + FLOWERS
+ */
+ .home-photo {
+ width: 42%;
+ display: flex;
+ justify-content: center;
+ }
+ .home-photo img {
+ width: 100%;
+ height: 390px;
+ object-fit: cover;
+ border-radius: 8px;
+ box-shadow:
+ 0 12px 30px rgba(80,55,45,.15);
+ }
+ /* ================= SECTION TITLES ================= */
+ .title {
+ font-family: cursive;
+ font-size: 45px;
+ font-weight: normal;
+ margin: 0 0 30px;
+ }
+ .title:after {
+ content: "";
+ display: block;
+ width: 180px;
+ height: 8px;
+ background: #efd0ca;
+ border-radius: 50%;
+ margin-top: 5px;
+ }
+ /* ================= ABOUT ME ================= */
+ #about {
+ background: #f8e9e4;
+ }
+ .about-content {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 60px;
+ }
+ .about-text {
+ width: 55%;
+ font-size: 18px;
+ line-height: 1.8;
+ }
+ .about-photo {
+ width: 40%;
+ text-align: center;
+ }
+ .about-photo img {
+ width: 330px;
+ max-width: 100%;
+ border: 10px solid white;
+ box-shadow:
+ 0 10px 25px rgba(70,50,40,.15);
+ transform: rotate(2deg);
+ display: block;
+ margin: auto;
+ }
+ /* ================= MY INTERESTS ================= */
+ #interests {
+ background: #fcf8f4;
+ }
+ .interest-content {
+ display: flex;
+ gap: 50px;
+ align-items: center;
+ }
+ .interest-photos {
+ width: 58%;
+ }
+ .interest-photos img {
+ width: 100%;
+ height: 270px;
+ object-fit: cover;
+ border: 8px solid white;
+ box-shadow:
+ 0 5px 15px rgba(70,50,40,.12);
+ margin-bottom: 15px;
+ }
+ .interest-list {
+ width: 42%;
+ font-size: 18px;
+ line-height: 2.15;
+ }
+ /* ================= COLLEGE LIFE ================= */
+ #college {
+ background: #f8e9e4;
+ }
+ .college-content {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 60px;
+ }
+ .college-text {
+ width: 50%;
+ font-size: 18px;
+ line-height: 1.8;
+ }
+ .college-photo {
+ width: 48%;
+ }
+ .college-photo img {
+ width: 100%;
+ border: 10px solid white;
+ box-shadow:
+ 0 10px 25px rgba(70,50,40,.15);
+ transform: rotate(-2deg);
+ display: block;
+ }
+ /* ================= FAVORITES ================= */
+ #favorites {
+ background: #fcf8f4;
+ }
+ .favorites-content {
+ display: flex;
+ align-items: center;
+ gap: 60px;
+ }
+ .favorite-photos {
+ width: 45%;
+ }
+ .favorite-photos img {
+ width: 100%;
+ height: 270px;
+ object-fit: cover;
+ border: 8px solid white;
+ box-shadow:
+ 0 5px 15px rgba(70,50,40,.12);
+ margin-bottom: 15px;
+ }
+ .favorite-list {
+ width: 55%;
+ font-size: 18px;
+ line-height: 2;
+ }
+ /* ================= GOALS ================= */
+ #goals {
+ background: #f8e9e4;
+ }
+ .goals-content {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 60px;
+ }
+ .goals-text {
+ width: 50%;
+ font-size: 18px;
+ line-height: 1.8;
+ }
+ .goals-photo {
+ width: 48%;
+ }
+ .goals-photo img {
+ width: 100%;
+ border: 10px solid white;
+ box-shadow:
+ 0 10px 25px rgba(70,50,40,.15);
+ display: block;
+ }
+ /* ================= FOOTER ================= */
+ footer {
+ text-align: center;
+ padding: 35px;
+ background: #e9c9c1;
+ font-size: 15px;
+ }
+ /* ================= MOBILE ================= */
+ @media(max-width:800px) {
+ header {
+ height: auto;
+ padding: 18px;
+ flex-direction: column;
+ gap: 12px;
+ }
+ nav {
+ text-align: center;
+ }
+ nav a {
+ margin: 5px;
+ display: inline-block;
+ }
+ #home,
+ .about-content,
+ .interest-content,
+ .college-content,
+ .favorites-content,
+ .goals-content {
+ flex-direction: column;
+ }
+ .home-text,
+ .home-photo,
+ .about-text,
+ .about-photo,
+ .interest-photos,
+ .interest-list,
+ .college-text,
+ .college-photo,
+ .favorite-photos,
+ .favorite-list,
+ .goals-text,
+ .goals-photo {
+ width: 100%;
+ }
+ .home-text h1 {
+ font-size: 45px;
+ }
+ .underline {
+ width: 250px;
+ }
+ .home-photo img {
+ height: 300px;
+ }
+ }
+ </style>
+</head>
+<body>
+<!-- ================= HEADER ================= -->
+<header>
+ <div class="logo">
+ Aira's Little Corner ♡
+ </div>
+ <nav>
+ <a href="#home">Home</a>
+ <a href="#about">About Me</a>
+ <a href="#interests">Interests</a>
+ <a href="#college">College Life</a>
+ <a href="#favorites">Favorites</a>
+ <a href="#goals">Goals</a>
+ </nav>
+</header>
+<!-- ================= HOME ================= -->
+<section id="home">
+ <div class="home-text">
+ <h1>
+ Welcome to My<br>
+ Little Corner! ♡
+ </h1>
+ <div class="underline"></div>
+ <p>
+ Hi! I'm Aira, a college student who loves simple moments,
+ learning new things, and creating memories. This blog is a
+ small space where I can share a little part of my life.
+ </p>
+ <div class="quote">
+ ♡ Good things take time.
+ </div>
+ </div>
+ <!-- ONLY BOOK + COFFEE + FLOWERS -->
+ <div class="home-photo">
+ <img
+ src="https://scontent.fmnl25-6.fna.fbcdn.net/v/t39.30808-6/819742725_2523512701494060_469426880818798204_n.jpg?stp=dst-jpg_tt6&cstp=mx736x1104&ctp=s736x1104&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEVCFraxbOF3LXx7f2rZgf6-5dBcBJae7H7l0FwElp7sdUs8ANd_POtKQniwHIGaVEcH5fVttfhPzbJ7ii1jg7k&_nc_ohc=R1P3onINBYsQ7kNvwHtxSFm&_nc_oc=AdoV5HiwtgQhwEMAVGWI8biXmjLCjFYQ_0GNvunESOhiu1lhxmQDSLIKXGSU3w3dRqA&_nc_zt=23&_nc_ht=scontent.fmnl25-6.fna&_nc_gid=e4uZAUfbBr102uaWHnBuTw&_nc_ss=7b2a8&oh=00_AQISn3huC9GsPaNIfO8awOyrkztHoK4L7p7273b4h4KtTQ&oe=6ABBC0D6"
+ alt="Book, cup of coffee and flowers"
+ >
+ </div>
+</section>
+<!-- ================= ABOUT ME ================= -->
+<section id="about">
+ <div class="about-content">
+ <div class="about-text">
+ <h2 class="title">
+ About Me ♡
+ </h2>
+ <p>
+ <strong>Hello, I'm Aira!</strong>
+ </p>
+ <p>
+ I'm a college student taking up Office Administration.
+ I enjoy spending time with people I love, listening to music,
+ learning new skills, and appreciating the little things in life.
+ </p>
+ <p>
+ I may not have everything figured out yet,
+ but I'm happy with how far I've come.
+ </p>
+ </div>
+ <!-- YOUR ORIGINAL PHOTO -->
+ <div class="about-photo">
+ <img
+ src="my-original-photo.jpg"
+ alt="Aira"
+ >
+ </div>
+ </div>
+</section>
+<!-- ================= MY INTERESTS ================= -->
+<section id="interests">
+ <div class="interest-content">
+ <div class="interest-photos">
+ <img
+ src="https://scontent.fmnl25-2.fna.fbcdn.net/v/t39.30808-6/821138727_2523514621493868_52739933339902088_n.jpg?stp=dst-jpg_tt6&cstp=mx736x1309&ctp=s736x1309&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFCggut5MCDMzuNYslBuqHSTVqP-Lew2_RNWo_4t7Db9L04WigbS-C_t-kZXMTTNSw5wXCED62ByaKmUDRhp98W&_nc_ohc=HkUzdnQXfJcQ7kNvwEk6rKG&_nc_oc=AdrZvb7QW-WFiiIcEW9qgXi3QkBL3NJbVVcC-RDnVu7B3txi9L0YmYeK03h_wA_aaiM&_nc_zt=23&_nc_ht=scontent.fmnl25-2.fna&_nc_gid=pzLME0cZiO1SaIGwlGgWBQ&_nc_ss=7b2a8&oh=00_AQJsb6whphDwLxdLwBvfOhaUAY04DCZreVKQWDatPwUwDA&oe=6ABBB2F3"
+ alt="HTML and technology"
+ >
+ <img
+ src="https://scontent.fmnl25-4.fna.fbcdn.net/v/t39.30808-6/821729403_2523514704827193_3983084804888011838_n.jpg?stp=dst-jpg_tt6&cstp=mx735x809&ctp=s735x809&_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHqdc8hnN0uM_vPQMhDRI5o6lEJmXTHk4zqUQmZdMeTjDv8YAQ0iAyPLQuKnw_92c9WW30PpO2kh0APEe2QtAX1&_nc_ohc=IWepOD373V8Q7kNvwEhmM0B&_nc_oc=AdoeUlIuJfclAbfMV0qxh7JEpdxaPOZ_vUApeCql0kb9UzCP5Dj-uR6R55ULsSsBbH0&_nc_zt=23&_nc_ht=scontent.fmnl25-4.fna&_nc_gid=vaawG4u2BrbFXu3HDibq9w&_nc_ss=7b2a8&oh=00_AQKKp3F5WHGmE5rBE712lHQ8pZqYrwxLVD8Y3pKRQGv9xg&oe=6ABBC735"
+ alt="Books and studying"
+ >
+ <img
+ src="https://scontent.fmnl25-4.fna.fbcdn.net/v/t39.30808-6/821196234_2523514768160520_3741987444839059296_n.jpg?stp=dst-jpg_tt6&cstp=mx736x736&ctp=s736x736&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEaYQ-Ku2eYfDgXyR3AqiKYlkrr83NhnECWSuvzc2GcQDbrP8I4H_q5g3Yp2XJqw-VzXIBgQloIQMQ5nOClB7cm&_nc_ohc=pGaUv_7NUSEQ7kNvwEX5m-1&_nc_oc=AdrzQqFfehs17-d6r56o7Bv50mq5NxMnHOHwN-NUux1JF2eF5PBtFKleiPV8yvy7WSg&_nc_zt=23&_nc_ht=scontent.fmnl25-4.fna&_nc_gid=k6_T4QrGQDys_Ls-gxSfsg&_nc_ss=7b2a8&oh=00_AQIPxrsYi3bYv8wKu94cW7W6HHbhbCO22HGeoJSpHycTjA&oe=6ABBB4EE"
+ alt="Music"
+ >
+ <img
+ src="https://scontent.fmnl25-5.fna.fbcdn.net/v/t39.30808-6/824979060_2523514634827200_1461661453075469607_n.jpg?stp=dst-jpg_tt6&cstp=mx736x981&ctp=s736x981&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFXDMk5dVvJrQZioDtuGxSyIFAhTM-eRi8gUCFMz55GL6Nd5Xugzae7GcetMEVHf2LymuwB6kZw3u17pN_Qdo-V&_nc_ohc=_JZ6M04KmRUQ7kNvwHh4zF3&_nc_oc=AdrZIjK7v_-xSKitdVyc8JSzvc5sFz4P9CsBSZ1O7m8NDXvKqcRvBLrxVuuF2ACLNFk&_nc_zt=23&_nc_ht=scontent.fmnl25-5.fna&_nc_gid=lEE7lBrKygBrRPQpDfvjhA&_nc_ss=7b2a8&oh=00_AQLxVG6wHCTWMbTYDGU5uamrZ99d28GH_NDQeGyHVQaPRw&oe=6ABBCDA2"
+ alt="Coffee and photography"
+ >
+ </div>
+ <div class="interest-list">
+ <h2 class="title">
+ My Interests ♡
+ </h2>
+ ♡ Technology & HTML
+ <br>
+ ♡ Studying and learning
+ <br>
+ ♡ Listening to music
+ <br>
+ ♡ Cafés and coffee
+ <br>
+ ♡ Taking photos
+ <br>
+ ♡ Spending time with family and friends
+ <br>
+ ♡ Creating memories
+ </div>
+ </div>
+</section>
+<!-- ================= COLLEGE LIFE ================= -->
+<section id="college">
+ <div class="college-content">
+ <div class="college-text">
+ <h2 class="title">
+ My College Life ♡
+ </h2>
+ <p>
+ College has taught me to become more responsible
+ and independent. There are stressful days, but there
+ are also many happy moments that I will always remember.
+ </p>
+ <p>
+ Every experience gives me a chance to learn, grow,
+ and become a better version of myself.
+ </p>
+ </div>
+ <!-- YOUR PATEROS TECHNOLOGICAL COLLEGE PHOTO -->
+ <div class="college-photo">
+ <img
+ src="https://scontent.fmnl25-4.fna.fbcdn.net/v/t39.30808-6/797339007_28331244353205573_4441771407574435882_n.jpg?stp=dst-jpg_tt6&cstp=mx1860x846&ctp=s1860x846&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEo0E17lDdRrWtEh7nxC3rmRMYhMhK5ebdExiEyErl5t5dsX7C0jXUzabSszPqB22CqG_uXwL0ky0M7336uYb6K&_nc_ohc=eplPs8KPYFIQ7kNvwF6Ylvn&_nc_oc=Adpq8oqWzoOEtXMO-JXYkvwNxFDNN7xa_U_QoGhrBd0m3rPyERqBG1aFM4oHOrjkD78&_nc_zt=23&_nc_ht=scontent.fmnl25-4.fna&_nc_gid=bE9ltveFGhocLdseLUN9pQ&_nc_ss=7b2a8&oh=00_AQIDmFZx6IkyVjqCbp1OfjXpZ4-8oL5B_3J3BNxeIyK7iw&oe=6ABBDC02"
+ alt="Pateros Technological College"
+ >
+ </div>
+ </div>
+</section>
+<!-- ================= FAVORITES ================= -->
+<section id="favorites">
+ <div class="favorites-content">
+ <div class="favorite-photos">
+ <img
+ src="https://scontent.fmnl25-1.fna.fbcdn.net/v/t39.30808-6/822286095_2523514694827194_2597610592824932482_n.jpg?stp=dst-jpg_tt6&cstp=mx736x981&ctp=s736x981&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE-xOnCjdb6gtdlgq6rwBd1O-FMr2-zwOY74Uyvb7PA5tkB2QwtOrHy7Y8h8QwaELTTQ9o1_N6yo-ISETor7oK6&_nc_ohc=8pOdhIup5kcQ7kNvwETYwte&_nc_oc=AdqX41seYmNW9zweo6FlpNRmSq_QNNQdfkGfRvhW76jTY283u4muITDdE-0nZymIT6g&_nc_zt=23&_nc_ht=scontent.fmnl25-1.fna&_nc_gid=CM10uCtoc3Q5ZBkuFGEK_A&_nc_ss=7b2a8&oh=00_AQKk8QiYBtq2GspYJeeJSzseQROh0xiV8JjJ6aGH81xxRg&oe=6ABBB697"
+ alt="Coffee"
+ >
+ <img
+ src="https://scontent.fmnl25-3.fna.fbcdn.net/v/t39.30808-6/820381557_2523514624827201_4866263014607425471_n.jpg?stp=dst-jpg_tt6&cstp=mx736x1104&ctp=s736x1104&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFWXLMPMPxoxsMKUEdVWCqotvFqUU7uBVi28WpRTu4FWK3rJByfwVItQYWVJR3kjZ2Xj-9lELkBQxHOWSlNgses&_nc_ohc=YPBUIjCk3fMQ7kNvwGHxFpU&_nc_oc=Adp6DUfP9fQVO241XKZAgjI3ZhODW9wQesYHfMdRhG71euigTy1NcQbTOBwhGQ1NwrQ&_nc_zt=23&_nc_ht=scontent.fmnl25-3.fna&_nc_gid=bNUaM9qPRIvpAYTjbD7Q8A&_nc_ss=7b2a8&oh=00_AQKKrFrzTAtAR3sobtoeVj5--hcFNoxN_n9bS3yQpobzMw&oe=6ABBACE1"
+ alt="Pasta"
+ >
+ <img
+ src="https://scontent.fmnl25-5.fna.fbcdn.net/v/t39.30808-6/824979060_2523514634827200_1461661453075469607_n.jpg?stp=dst-jpg_tt6&cstp=mx736x981&ctp=s736x981&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFXDMk5dVvJrQZioDtuGxSyIFAhTM-eRi8gUCFMz55GL6Nd5Xugzae7GcetMEVHf2LymuwB6kZw3u17pN_Qdo-V&_nc_ohc=_JZ6M04KmRUQ7kNvwHh4zF3&_nc_oc=AdrZIjK7v_-xSKitdVyc8JSzvc5sFz4P9CsBSZ1O7m8NDXvKqcRvBLrxVuuF2ACLNFk&_nc_zt=23&_nc_ht=scontent.fmnl25-5.fna&_nc_gid=lEE7lBrKygBrRPQpDfvjhA&_nc_ss=7b2a8&oh=00_AQLxVG6wHCTWMbTYDGU5uamrZ99d28GH_NDQeGyHVQaPRw&oe=6ABBCDA2"
+ alt="Camera"
+ >
+ <img
+ src="https://scontent.fmnl25-2.fna.fbcdn.net/v/t39.30808-6/824074086_2523514698160527_1530222278379136483_n.jpg?stp=dst-jpg_tt6&cstp=mx736x1308&ctp=s736x1308&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEQ7Zbh6HUtR5dRMQ-Yv-Mg4dmFDzXfaw7h2YUPNd9rDvWT5wH3lTClhLEXtyno9o91MTwzNKD6CEfUsju-b0oh&_nc_ohc=R_eTQ5kA_jAQ7kNvwFhRKUv&_nc_oc=AdoUdcF3RhZqwcmecpxRaEC3kKm_yeiExw74x-qpEcg9D1g9P9l9uUn6mf0S98MQr4Y&_nc_zt=23&_nc_ht=scontent.fmnl25-2.fna&_nc_gid=q2L7pRoU14Lka04RVHfuug&_nc_ss=7b2a8&oh=00_AQI-PSn5arNthoVhAK5YUA4NfqBo7agocJGjwttadRtoxg&oe=6ABBCF56"
+ alt="Peaceful place"
+ >
+ </div>
+ <div class="favorite-list">
+ <h2 class="title">
+ My Favorites ♡
+ </h2>
+ ♡ Favorite Color: Black & White
+ <br>
+ ♡ Favorite Food: Pasta
+ <br>
+ ♡ Favorite Drink: Coffee
+ <br>
+ ♡ Favorite Hobby: Listening to Music
+ <br>
+ ♡ Favorite Place: Peaceful Places
+ <br>
+ ♡ Favorite Quote:
+ “Enjoy the little things in life.”
+ </div>
+ </div>
+</section>
+<!-- ================= GOALS ================= -->
+<section id="goals">
+ <div class="goals-content">
+ <div class="goals-text">
+ <h2 class="title">
+ My Goals ♡
+ </h2>
+ <p>
+ I want to finish my studies, improve my skills,
+ build a good career, and become a better version
+ of myself.
+ </p>
+ <p>
+ I also want to experience new places, meet new people,
+ and create more meaningful memories.
+ </p>
+ <p>
+ <strong>
+ Big dreams, small steps. ♡
+ </strong>
+ </p>
+ </div>
+ <!-- DIPLOMA + GRADUATION TOGA -->
+ <div class="goals-photo">
+ <img
+ src="https://scontent.fmnl25-6.fna.fbcdn.net/v/t39.30808-6/824693729_2523514708160526_6603607741956955060_n.jpg?stp=dst-jpg_tt6&cstp=mx736x974&ctp=s736x974&_nc_cat=103&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGgkfo-drV9S4TYVLEYj5iZCOIWD2JEX6QI4hYPYkRfpHeunm1ifr0Y6BH37vemBf9N2Cu85N-PfFDbSkD-fChq&_nc_ohc=HCC_oqJASowQ7kNvwFshDhC&_nc_oc=AdrbneuOvebzgU6KYqNVYjBmSB8OIUA4h-Gc1SNHGi_uq5sp2_-Ka02L_WL2Jjz6LEQ&_nc_zt=23&_nc_ht=scontent.fmnl25-6.fna&_nc_gid=wYFpg3mFLEvzFHStuQcJlw&_nc_ss=7b2a8&oh=00_AQLptWlD7hSU-BlqGD_dkJfzTvvoIbVaKxVcf45vc2Tzew&oe=6ABBC908"
+ alt="Diploma and graduation toga"
+ >
+ </div>
+ </div>
+</section>
+<!-- ================= FOOTER ================= -->
+<footer>
+ ♡ Thank you for visiting Aira's Little Corner! ♡
+ <br><br>
+ Made with love and a little bit of HTML.
+</footer>
+</body>
+</html>
